@@ -7,12 +7,16 @@ async function qrCode(){
 
    const innerHeight = document.getElementById('heightInput').value
    console.log(innerHeight)
-   const text = document.getElementById('innerText').value
-   console.log(text)
+   const innerQrcODE = document.getElementById('innerText').value
 
-   const response = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=${innerValue}x${innerHeight}&data=${text}`);
+
+  //  fetch(`https://api.qrserver.com/v1/create-qr-code/?size=${innerValue}x${innerHeight}&data=${text}`)
+  //    .then(res =>res.json())
+  //    .then(data =>console.log(data))
+
+  const qqqq = document.getElementById('qr-code-image')
+  qqqq.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=${innerValue}x${innerHeight}&data=${innerQrcODE}" alt="" srcset="">`
   
-  const movies = await response.json();
-  console.log(movies)
     
-}
+    
+} 
